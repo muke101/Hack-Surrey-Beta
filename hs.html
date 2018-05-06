@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="LTR">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+		<script type=text/javascript src="{{url_for('static', filename='hs.js') }}"></script>
+		<script type=text/javascript src="hs.js"></script>
+
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = "hs.css")}}">
+		<link rel="stylesheet" type="text/css" href="hs.css">
+
+  </head>
+
+
+<body>
+<section>
+
+
+<form id="myForm">
+  Type a name: <input type="text" id="nameText" value="Donald Trump"><br>
+	Type a sector: <input type="text" id="sectorText" value="Oil">
+</form>
+
+
+<button type="button" class="btn btn-outline-warning search">
+  Search
+</button>
+</section>
+
+<div class= "logistics">
+
+    <span class= "text1"> </span> <br>
+
+
+    <img id="graph1"><br>
+
+		<canvas id="lineChart" height="400" width="400"></canvas>
+
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+</body>
+</html>
