@@ -10,14 +10,13 @@ trump = "@realDonaldTrump"
 dates=[]
 text=[]
 end_date =  datetime.datetime.utcnow() - datetime.timedelta(days=3600)
-for status in tweepy.Cursor(api.user_timeline, id=trump).items():
+for status in tweepy.Cursor(api.user_timeline, tweet_mode='extended',  id=trump,).items():
 	dates.append(status.created_at)
-	text.append(status.text)
+	text.append(status.full_text)
 	if status.created_at < end_date:
 		break
-print(dates[-1])
-print(len(text))
-companies = ["ecorp", "shell", "verizon"]
+
+companies = ["exxon", "lockheed", "boeing", "martin", "north dakota"]
 companyTweet = {}
 for company in companies:
 	for c, tweet in enumerate(text):
